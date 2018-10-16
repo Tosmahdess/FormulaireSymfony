@@ -8,9 +8,10 @@
 
     {{ form_start(formUser) }}
 
-    {{ form_widget(formUser) }}
+    <div style="margin-left: 2rem; margin-right: 5rem">{{ form_widget(formUser) }}</div>
 
-    <button type="submit" class="btn btn-success">
+
+    <button type="submit" class="btn btn-success" style="margin-left: 2rem">
         {% if editMode %}
             Enregistrer
         {% else %}

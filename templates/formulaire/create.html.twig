@@ -4,14 +4,220 @@
 
 {% block body %}
 
-    <h1>Nouveau Formulaire</h1>
+    <h1 style="margin-left: 1rem">Entretien Professionnel</h1>
 
     {{ form_start(formUser) }}
+    {{ form_errors(formUser) }}
 
-    <div style="margin-left: 2rem; margin-right: 5rem">{{ form_widget(formUser) }}</div>
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.filiaire, 'Filiaire') }} </strong>
+            {{ form_errors(formUser.filiaire) }}
+            {{ form_widget(formUser.filiaire) }}
+        </font>
+    </div>
 
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.raisonsociale, 'Raison sociale société') }} </strong>
+            {{ form_errors(formUser.raisonsociale) }}
+            {{ form_widget(formUser.raisonsociale) }}
+        </font>
+    </div>
 
-    <button type="submit" class="btn btn-success" style="margin-left: 2rem">
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.etablissement, 'Intitulé établissement') }} </strong>
+            {{ form_errors(formUser.etablissement) }}
+            {{ form_widget(formUser.etablissement) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.nom, 'Nom') }} </strong>
+            {{ form_errors(formUser.nom) }}
+            {{ form_widget(formUser.nom) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.prenom, 'Prénom') }} </strong>
+            {{ form_errors(formUser.prenom) }}
+            {{ form_widget(formUser.prenom) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.dateembauche, 'Date d\'embauche dans la société') }} </strong>
+            {{ form_errors(formUser.dateembauche) }}
+            {{ form_widget(formUser.dateembauche) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.personnechargeentretien, 'Personne en charge de l\'entretien') }} </strong>
+            {{ form_errors(formUser.personnechargeentretien) }}
+            {{ form_widget(formUser.personnechargeentretien) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.dernierentretien, 'Dernier entretien professionnel') }} </strong>
+            {{ form_errors(formUser.dernierentretien) }}
+            {{ form_widget(formUser.dernierentretien) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.dateentretien, 'Date entretien professionnel 2018') }} </strong>
+            {{ form_errors(formUser.dateentretien) }}
+            {{ form_widget(formUser.dateentretien) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.convocationenvoye, 'Convocation envoyée le : ') }} </strong>
+            {{ form_errors(formUser.convocationenvoye) }}
+            {{ form_widget(formUser.convocationenvoye) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.convocationtype, 'Convocation par : Mail / Papier') }} </strong>
+            {{ form_errors(formUser.convocationtype) }}
+            {{ form_widget(formUser.convocationtype) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.retourdossier, 'Retour du dossier : ') }} </strong>
+            {{ form_errors(formUser.retourdossier) }}
+            {{ form_widget(formUser.retourdossier) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.progressionpro, 'Progression professionnelle depuis le dernier entretien : ') }} </strong>
+            {{ form_errors(formUser.progressionpro) }}
+            {{ form_widget(formUser.progressionpro) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.actionformation1, 'Action de formation réalisée n°1') }} </strong>
+            {{ form_errors(formUser.actionformation1) }}
+            {{ form_widget(formUser.actionformation1) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.dateformation1, 'Date de la formation réalisée n°1') }} </strong>
+            {{ form_errors(formUser.dateformation1) }}
+            {{ form_widget(formUser.dateformation1) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.actionformation2, 'Action de formation réalisée n°2') }} </strong>
+            {{ form_errors(formUser.actionformation2) }}
+            {{ form_widget(formUser.actionformation2) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.dateformation2, 'Date de la formation réalisée n°2') }} </strong>
+            {{ form_errors(formUser.dateformation2) }}
+            {{ form_widget(formUser.dateformation2) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.certification, 'Certification obtenues depuis le dernier entretien : ') }} </strong>
+            {{ form_errors(formUser.certification) }}
+            {{ form_widget(formUser.certification) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.objectifsct, 'Objectifs professionnels à CT : ') }} </strong>
+            {{ form_errors(formUser.objectifsct) }}
+            {{ form_widget(formUser.objectifsct) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.objectifsmlt, 'Objectifs professionnels à MLT : ') }} </strong>
+            {{ form_errors(formUser.objectifsmlt) }}
+            {{ form_widget(formUser.objectifsmlt) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.demandeformation1, 'Demande de formation n°1') }} </strong>
+            {{ form_errors(formUser.demandeformation1) }}
+            {{ form_widget(formUser.demandeformation1) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.dateprevi1, 'Date prévisionnelle n°1') }} </strong>
+            {{ form_errors(formUser.dateprevi1) }}
+            {{ form_widget(formUser.dateprevi1) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.demandeformation2, 'Demande de formation n°2') }} </strong>
+            {{ form_errors(formUser.demandeformation2) }}
+            {{ form_widget(formUser.demandeformation2) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.dateprevi2, 'Date prévisionnelle n°2') }} </strong>
+            {{ form_errors(formUser.dateprevi2) }}
+            {{ form_widget(formUser.dateprevi2) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.avisresponsable, 'Avis du responsable') }} </strong>
+            {{ form_errors(formUser.avisresponsable) }}
+            {{ form_widget(formUser.avisresponsable) }}
+        </font>
+    </div>
+
+    <div style="margin-left: 2rem; margin-right: 50%">
+        <font size="4" face="georgia">
+            <strong> {{ form_label(formUser.projet, 'Le collaborateur a-t-il un projet de : VAE, Bilan de compétence, CIF, CPF, CEP ? ') }} </strong>
+            {{ form_errors(formUser.projet) }}
+            {{ form_widget(formUser.projet) }}
+        </font>
+    </div>
+
+    <button type="submit" class="btn btn-success" style="margin-left: 2rem; margin-top: 1rem">
         {% if editMode %}
             Enregistrer
         {% else %}

@@ -42,12 +42,12 @@ class Formulaire
     private $prenom;
 
     /**
-     * @ORM\Column(type="date", nullable=true)
+     * @ORM\Column(type="date")
      */
     private $dateembauche;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $personnechargeentretien;
 
@@ -57,7 +57,7 @@ class Formulaire
     private $dernierentretien;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      */
     private $dateentretien;
 

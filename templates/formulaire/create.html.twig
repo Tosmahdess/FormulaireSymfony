@@ -269,6 +269,8 @@
         {% endif %}
     </button>
 
+    <input type="button" class="btn btn-success" id="ExportCsv" value="Export">
+
     {{ form_end(formUser) }}
 
     {% block javascripts %}
@@ -291,6 +293,16 @@
                 document.getElementById("div2").style.display = "none"
             }
         }
+
+        $("#ExportCsv").click(function(){
+
+            $.ajax({
+                url : 'http://127.0.0.1:8000/Export',
+                type : 'POST',
+            });
+
+        });
+
 
     </script>
     {% endblock %}

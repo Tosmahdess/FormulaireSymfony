@@ -11,6 +11,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use App\Repository\FormulaireRepository;
 use App\Entity\Formulaire;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 
 class FormulaireController extends AbstractController
@@ -218,5 +220,51 @@ class FormulaireController extends AbstractController
         return $this->render('formulaire/show.html.twig', [
             'controller_name' => 'FormulaireController',
         ]);
+    }
+
+    /**
+     * @Route("/Export", name="formulaire_export")
+     */
+    public function generateCsvAction(){
+
+        //Connexion à la base de données avec le service database_connection
+        $repo = $this->getDoctrine()->getRepository(Formulaire::class);
+
+        //Requête
+        $results = $repo->query( "Votre requête" );
+
+        $response = new StreamedResponse();
+        $response->setCallback(function() use($results){
+
+            $handle = fopen('c:\\Users\\thomas\\Desktop\\export.csv', 'w+');
+            // Nom des colonnes du CSV
+            fputcsv($handle, array('id',
+                'filiaire',
+                'raisonsociale',
+                'etablissement'
+            ),';');
+
+            //Champs
+            while( $row = $results->fetch() )
+            {
+
+                fputcsv($handle,array($row['id'],
+                    $row['filiaire'],
+                    $row['raisonsociale'],
+                    $row['etablissement']
+                ),';');
+
+            }
+
+            fclose($handle);
+        });
+
+
+       $response->setStatusCode(200);
+       $response->headers->set('Content-Type', 'text/csv; charset=utf-8');
+       $response->headers->set('Content-Disposition','attachment; filename="export.csv"');
+
+       return $response;
+
     }
 }

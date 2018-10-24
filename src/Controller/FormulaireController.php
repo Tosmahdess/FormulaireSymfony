@@ -9,10 +9,12 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use App\Repository\FormulaireRepository;
 use App\Entity\Formulaire;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\StreamedResponse;
+use Doctrine\ORM\EntityRepository;
 
 
 class FormulaireController extends AbstractController
@@ -139,15 +141,15 @@ class FormulaireController extends AbstractController
                              'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',),
                          'format' => 'dd-MM-yyyy'))
                      ->add('personnechargeentretien')
-                     ->add('dernierentretien', DateType::class, array(
+                     ->add('dernierentretien', DateType::class, array('required' => false,
                          'placeholder' => array(
                              'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',),
                          'format' => 'dd-MM-yyyy'))
-                     ->add('dateentretien', DateType::class, array(
+                     ->add('dateentretien', DateType::class, array('required' => false,
                          'placeholder' => array(
                              'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',),
                          'format' => 'dd-MM-yyyy'))
-                     ->add('convocationenvoye', DateType::class, array(
+                     ->add('convocationenvoye', DateType::class, array('required' => false,
                          'placeholder' => array(
                              'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',),
                          'format' => 'dd-MM-yyyy'))
@@ -157,18 +159,18 @@ class FormulaireController extends AbstractController
                              'Papier' => 'Papier'
                          )
                      ))
-                     ->add('retourdossier', DateType::class, array(
+                     ->add('retourdossier', DateType::class, array('required' => false,
                          'placeholder' => array(
                              'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',),
                          'format' => 'dd-MM-yyyy'))
                      ->add('progressionpro')
                      ->add('actionformation1')
-                     ->add('dateformation1', DateType::class, array(
+                     ->add('dateformation1', DateType::class, array('required' => false,
                          'placeholder' => array(
                              'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',),
                          'format' => 'dd-MM-yyyy'))
                      ->add('actionformation2')
-                     ->add('dateformation2', DateType::class, array(
+                     ->add('dateformation2', DateType::class, array('required' => false,
                          'placeholder' => array(
                              'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',),
                          'format' => 'dd-MM-yyyy'))
@@ -176,12 +178,12 @@ class FormulaireController extends AbstractController
                      ->add('objectifsct')
                      ->add('objectifsmlt')
                      ->add('demandeformation1')
-                     ->add('dateprevi1', DateType::class, array(
+                     ->add('dateprevi1', DateType::class, array('required' => false,
                          'placeholder' => array(
                              'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',),
                          'format' => 'dd-MM-yyyy'))
                      ->add('demandeformation2')
-                     ->add('dateprevi2', DateType::class, array(
+                     ->add('dateprevi2', DateType::class, array('required' => false,
                          'placeholder' => array(
                              'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',),
                          'format' => 'dd-MM-yyyy'))
@@ -231,31 +233,76 @@ class FormulaireController extends AbstractController
         $repo = $this->getDoctrine()->getRepository(Formulaire::class);
 
         //Requête
-        $results = $repo->query( "Votre requête" );
+        $results = $repo->findAll();
 
         $response = new StreamedResponse();
         $response->setCallback(function() use($results){
 
             $handle = fopen('c:\\Users\\thomas\\Desktop\\export.csv', 'w+');
             // Nom des colonnes du CSV
-            fputcsv($handle, array('id',
-                'filiaire',
-                'raisonsociale',
-                'etablissement'
-            ),';');
+            fputcsv($handle, array('ID',
+                'Filiaire',
+                'Raison sociale société',
+                'Intitulé établissement',
+                'Nom',
+                'Prénom',
+                'Date d\'embauche dans la société',
+                'Personne en charge de l\'entretien',
+                'Dernier entretien professionnel',
+                'Date entretien professionnel',
+                'Convocation envoyée le',
+                'Convocation par : Mail - Papier',
+                'Retour du dossier',
+                'Progression professionnelle depuis le dernier entretien professionnel',
+                'Action de formation réalisée n°1',
+                'Date de la formation réalisée n°1',
+                'Action de formation réalisée n°2',
+                'Date de la formation réalisée n°2',
+                'Certification obtenus depuis le dernier entretien',
+                'Objectifs professionnels à CT',
+                'Objectifs professionnels à MLT',
+                'Demande de formation n°1',
+                'Date prévisionnelle n°1',
+                'Demande de formation n°2',
+                'Date prévisionnelle n°2',
+                'Avis du responsable',
+                'Le collaborateur a-t-il un projet de : VAE, Bilan de compétences, CIF, CPF, CEP'
+            ), ';');
 
             //Champs
-            while( $row = $results->fetch() )
+            foreach ($results as $index => $results)
             {
-
-                fputcsv($handle,array($row['id'],
-                    $row['filiaire'],
-                    $row['raisonsociale'],
-                    $row['etablissement']
+                //dump($client);die();
+                fputcsv($handle,array(
+                    $results->getId(),
+                    $results->getFiliaire(),
+                    $results->getRaisonsociale(),
+                    $results->getEtablissement(),
+                    $results->getNom(),
+                    $results->getPrenom(),
+                    $results->getDateembauche(),
+                    $results->getPersonnechargeentretien(),
+                    $results->getDernierentretien(),
+                    $results->getDateentretien(),
+                    $results->getConvocationenvoye(),
+                    $results->getConvocationtype(),
+                    $results->getRetourdossier(),
+                    $results->getProgressionpro(),
+                    $results->getActionformation1(),
+                    $results->getDateformation1(),
+                    $results->getActionformation2(),
+                    $results->getDateformation2(),
+                    $results->getCertification(),
+                    $results->getObjectifsct(),
+                    $results->getObjectifsmlt(),
+                    $results->getDemandeformation1(),
+                    $results->getDateprevi1(),
+                    $results->getDemandeformation2(),
+                    $results->getDateprevi2(),
+                    $results->getAvisresponsable(),
+                    $results->getProjet()
                 ),';');
-
             }
-
             fclose($handle);
         });
 

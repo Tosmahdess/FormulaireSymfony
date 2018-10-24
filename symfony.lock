@@ -89,6 +89,9 @@
     "egulias/email-validator": {
         "version": "2.1.6"
     },
+    "egyg33k/csv-bundle": {
+        "version": "1.0.1"
+    },
     "facebook/webdriver": {
         "version": "1.6.0"
     },
@@ -97,6 +100,9 @@
     },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
+    },
+    "league/csv": {
+        "version": "9.1.4"
     },
     "monolog/monolog": {
         "version": "1.23.0"

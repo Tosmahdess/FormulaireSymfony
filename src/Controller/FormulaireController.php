@@ -270,37 +270,37 @@ class FormulaireController extends AbstractController
             ), ';');
 
             //Champs
-            foreach ($results as $index => $results)
+            foreach ($results as $index => $result)
             {
                 //dump($client);die();
                 fputcsv($handle,array(
-                    $results->getId(),
-                    $results->getFiliaire(),
-                    $results->getRaisonsociale(),
-                    $results->getEtablissement(),
-                    $results->getNom(),
-                    $results->getPrenom(),
-                    $results->getDateembauche()->format('dd-MM-yyyy'),
-                    $results->getPersonnechargeentretien(),
-                    $results->getDernierentretien()->format('dd-MM-yyyy'),
-                    $results->getDateentretien()->format('dd-MM-yyyy'),
-                    $results->getConvocationenvoye()->format('dd-MM-yyyy'),
-                    $results->getConvocationtype(),
-                    $results->getRetourdossier()->format('dd-MM-yyyy'),
-                    $results->getProgressionpro(),
-                    $results->getActionformation1(),
-                    $results->getDateformation1()->format('dd-MM-yyyy'),
-                    $results->getActionformation2(),
-                    $results->getDateformation2()->format('dd-MM-yyyy'),
-                    $results->getCertification(),
-                    $results->getObjectifsct(),
-                    $results->getObjectifsmlt(),
-                    $results->getDemandeformation1(),
-                    $results->getDateprevi1()->format('dd-MM-yyyy'),
-                    $results->getDemandeformation2(),
-                    $results->getDateprevi2()->format('dd-MM-yyyy'),
-                    $results->getAvisresponsable(),
-                    $results->getProjet()
+                    $result->getId(),
+                    $result->getFiliaire(),
+                    $result->getRaisonsociale(),
+                    $result->getEtablissement(),
+                    $result->getNom(),
+                    $result->getPrenom(),
+                    $result->getDateembauche()->format('dd-MM-yyyy'),
+                    $result->getPersonnechargeentretien(),
+                    $result->getDernierentretien()->format('dd-MM-yyyy'),
+                    $result->getDateentretien()->format('dd-MM-yyyy'),
+                    $result->getConvocationenvoye()->format('dd-MM-yyyy'),
+                    $result->getConvocationtype(),
+                    $result->getRetourdossier()->format('dd-MM-yyyy'),
+                    $result->getProgressionpro(),
+                    $result->getActionformation1(),
+                    $result->getDateformation1()->format('dd-MM-yyyy'),
+                    $result->getActionformation2(),
+                    $result->getDateformation2()->format('dd-MM-yyyy'),
+                    $result->getCertification(),
+                    $result->getObjectifsct(),
+                    $result->getObjectifsmlt(),
+                    $result->getDemandeformation1(),
+                    $result->getDateprevi1()->format('dd-MM-yyyy'),
+                    $result->getDemandeformation2(),
+                    $result->getDateprevi2()->format('dd-MM-yyyy'),
+                    $result->getAvisresponsable(),
+                    $result->getProjet()
                 ),';');
             }
             fclose($handle);
@@ -313,5 +313,24 @@ class FormulaireController extends AbstractController
 
        return $response;
 
+    }
+
+    /**
+     * @Route("/Search", name="formulaire_search")
+     */
+    public function research()
+    {
+
+        //Connexion à la base de données avec le service database_connection
+        $repo = $this->getDoctrine()->getRepository(Formulaire::class);
+
+        $results = $repo->findAll();
+        if (isset($_GET['q']) AND !empty($_GET['q'])) {
+            $q = htmlspecialchars($_GET['q']);
+            $articles = $bdd->query('SELECT id, nom, prenom, dateentretien FROM formulaire WHERE nom LIKE "%' . $q . '%" ORDER BY id DESC');
+            if ($articles->rowCount() == 0) {
+                $articles = $bdd->query('SELECT titre FROM articles WHERE CONCAT(titre, contenu) LIKE "%' . $q . '%" ORDER BY id DESC');
+            }
+        }
     }
 }

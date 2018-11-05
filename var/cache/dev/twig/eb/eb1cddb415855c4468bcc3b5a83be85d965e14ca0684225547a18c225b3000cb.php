@@ -67,8 +67,8 @@ class __TwigTemplate_eb66c2f72f1eb3ea51de6c4e9e1ff28181f96037483b3aefa48a574f273
                     <a class=\"nav-link\" href=\"#\">Modifier</a>
                 </li>
             </ul>
-            <form class=\"form-inline my-2 my-lg-0\">
-                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">
+            <form class=\"form-inline my-2 my-lg-0\" method=\"GET\">
+                <input class=\"form-control mr-sm-2\" name=\"researchName\" id=\"search\" type=\"search\" placeholder=\"Search\">
                 <button class=\"btn btn-secondary my-2 my-sm-0\" type=\"submit\">Search</button>
             </form>
         </div>
@@ -77,9 +77,20 @@ class __TwigTemplate_eb66c2f72f1eb3ea51de6c4e9e1ff28181f96037483b3aefa48a574f273
         // line 38
         $this->displayBlock('body', $context, $blocks);
         // line 39
-        echo "        ";
+        echo "            <script>
+                \$(\"#search\").click(function(){
+
+                    \$.ajax({
+                        url : 'http://127.0.0.1:8000/Search',
+                        type : 'GET',
+                    });
+
+                });
+            </script>
+        ";
+        // line 49
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 40
+        // line 50
         echo "    </body>
 </html>
 ";
@@ -150,7 +161,7 @@ class __TwigTemplate_eb66c2f72f1eb3ea51de6c4e9e1ff28181f96037483b3aefa48a574f273
 
     }
 
-    // line 39
+    // line 49
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -179,7 +190,7 @@ class __TwigTemplate_eb66c2f72f1eb3ea51de6c4e9e1ff28181f96037483b3aefa48a574f273
 
     public function getDebugInfo()
     {
-        return array (  154 => 39,  137 => 38,  122 => 9,  113 => 8,  95 => 5,  83 => 40,  80 => 39,  78 => 38,  63 => 26,  52 => 18,  47 => 15,  45 => 8,  39 => 5,  33 => 1,);
+        return array (  165 => 49,  148 => 38,  133 => 9,  124 => 8,  106 => 5,  94 => 50,  92 => 49,  80 => 39,  78 => 38,  63 => 26,  52 => 18,  47 => 15,  45 => 8,  39 => 5,  33 => 1,);
     }
 
     public function getSourceContext()
@@ -215,13 +226,23 @@ class __TwigTemplate_eb66c2f72f1eb3ea51de6c4e9e1ff28181f96037483b3aefa48a574f273
                     <a class=\"nav-link\" href=\"#\">Modifier</a>
                 </li>
             </ul>
-            <form class=\"form-inline my-2 my-lg-0\">
-                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">
+            <form class=\"form-inline my-2 my-lg-0\" method=\"GET\">
+                <input class=\"form-control mr-sm-2\" name=\"researchName\" id=\"search\" type=\"search\" placeholder=\"Search\">
                 <button class=\"btn btn-secondary my-2 my-sm-0\" type=\"submit\">Search</button>
             </form>
         </div>
     </nav>
         {% block body %}{% endblock %}
+            <script>
+                \$(\"#search\").click(function(){
+
+                    \$.ajax({
+                        url : 'http://127.0.0.1:8000/Search',
+                        type : 'GET',
+                    });
+
+                });
+            </script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

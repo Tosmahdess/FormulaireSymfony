@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Formulaire;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * @method Formulaire|null find($id, $lockMode = null, $lockVersion = null)
@@ -47,4 +48,22 @@ class FormulaireRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    /**
+     * @param $researchName
+     * @return Formulaire[]
+     */
+    public function findEntretien($researchName): array
+    {
+        $qb = $this->createQueryBuilder('j')
+            ->andWhere('j.nom = :nom')
+            ->setParameter('nom', $researchName)
+            ->getQuery()
+            ->getResult();
+
+        return $qb->execute();
+
+        // to get just one result:
+        // $product = $qb->setMaxResults(1)->getOneOrNullResult();
+    }
 }

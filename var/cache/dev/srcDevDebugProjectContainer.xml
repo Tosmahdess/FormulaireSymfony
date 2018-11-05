@@ -4325,11 +4325,20 @@
         <argument key="manager" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.kGXpMcX" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.8R_dCPc" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="em" type="service" id="doctrine.orm.default_entity_manager"/>
+        <argument key="manager" type="service" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.PvPEmyl" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\FormulaireController::form" type="service" id=".service_locator.htHx7py"/>
+        <argument key="App\Controller\FormulaireController::research" type="service" id=".service_locator.8R_dCPc"/>
         <argument key="App\Controller\FormulaireController:form" type="service" id=".service_locator.htHx7py"/>
+        <argument key="App\Controller\FormulaireController:research" type="service" id=".service_locator.8R_dCPc"/>
       </argument>
     </service>
     <service id=".service_locator.yQVjGlt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -4568,7 +4577,7 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.kGXpMcX"/>
+      <argument type="service" id=".service_locator.PvPEmyl"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
@@ -4968,7 +4977,7 @@
     <service id="Twig\Environment" alias="twig" public="false"/>
     <service id="logger" alias="monolog.logger"/>
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.kGXpMcX"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.PvPEmyl"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id=".service_locator.AoifO_3" alias=".2_ServiceLocator~G9GKj8u" public="false"/>

@@ -68,6 +68,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     '/EntretienPro/create' => array(array('_route' => 'formulaire_create', '_controller' => 'App\\Controller\\FormulaireController::form'), null, null, null),
                     '/EntretienPro/show' => array(array('_route' => 'formulaire_show', '_controller' => 'App\\Controller\\FormulaireController::show'), null, null, null),
                     '/Export' => array(array('_route' => 'formulaire_export', '_controller' => 'App\\Controller\\FormulaireController::generateCsvAction'), null, null, null),
+                    '/Search' => array(array('_route' => 'formulaire_search', '_controller' => 'App\\Controller\\FormulaireController::research'), null, null, null),
                     '/_profiler/' => array(array('_route' => '_profiler_home', '_controller' => 'web_profiler.controller.profiler::homeAction'), null, null, null),
                     '/_profiler/search' => array(array('_route' => '_profiler_search', '_controller' => 'web_profiler.controller.profiler::searchAction'), null, null, null),
                     '/_profiler/search_bar' => array(array('_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'), null, null, null),
@@ -122,7 +123,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 switch ($m = (int) $matches['MARK']) {
                     default:
                         $routes = array(
-                            34 => array(array('_route' => 'formulaire_edit', '_controller' => 'App\\Controller\\FormulaireController::form'), array('id'), null, null),
+                            34 => array(array('_route' => 'formulaire_edit', '_controller' => 'App\\Controller\\FormulaireController::form'), array('nom'), null, null),
                             72 => array(array('_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'), array('code', '_format'), null, null),
                             91 => array(array('_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'), array('token'), null, null),
                             136 => array(array('_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'), array('token'), null, null),

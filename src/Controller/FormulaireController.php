@@ -15,6 +15,9 @@ use App\Entity\Formulaire;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\QueryBuilder;
+use Doctrine\Common\Persistence\ObjectRepository;
 
 
 class FormulaireController extends AbstractController
@@ -29,7 +32,7 @@ class FormulaireController extends AbstractController
 
     /**
      * @Route("/EntretienPro/create", name="formulaire_create")
-     * @Route("/EntretienPro/{id}/edit", name="formulaire_edit")
+     * @Route("/EntretienPro/{nom}/edit", name="formulaire_edit")
      */
     public function form(Request $request, ObjectManager $manager, Formulaire $formulaire = null)
     {
@@ -210,7 +213,7 @@ class FormulaireController extends AbstractController
 
         return $this->render('formulaire/create.html.twig', [
             'formUser' => $form->createView(),
-            'editMode' => $formulaire->getId() !== null
+            'editMode' => $formulaire->getNom() !== null
         ]);
     }
 
@@ -318,19 +321,19 @@ class FormulaireController extends AbstractController
     /**
      * @Route("/Search", name="formulaire_search")
      */
-    public function research()
+    public function research(Request $request, ObjectManager $manager, EntityManagerInterface $em): Response
     {
+        $researchName = $request->request->get("researchName");
 
-        //Connexion à la base de données avec le service database_connection
-        $repo = $this->getDoctrine()->getRepository(Formulaire::class);
+        $Entretien = $em->getDoctrine()->getRepository(FormulaireRepository::class)->findEntretien($researchName);
 
-        $results = $repo->findAll();
-        if (isset($_GET['q']) AND !empty($_GET['q'])) {
-            $q = htmlspecialchars($_GET['q']);
-            $articles = $bdd->query('SELECT id, nom, prenom, dateentretien FROM formulaire WHERE nom LIKE "%' . $q . '%" ORDER BY id DESC');
-            if ($articles->rowCount() == 0) {
-                $articles = $bdd->query('SELECT titre FROM articles WHERE CONCAT(titre, contenu) LIKE "%' . $q . '%" ORDER BY id DESC');
-            }
-        }
+        $jobs = $Entretien->getQuery()->getResult();
+
+        return $this->render('show.html.twig', [
+            'jobs' => $jobs,
+        ]);
+
     }
 }
+
+

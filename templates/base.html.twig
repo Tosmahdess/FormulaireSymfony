@@ -30,7 +30,7 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" method="GET">
-                <input class="form-control mr-sm-2" name="q" id="search" type="search" placeholder="Search">
+                <input class="form-control mr-sm-2" name="researchName" id="search" type="search" placeholder="Search">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
@@ -41,7 +41,7 @@
 
                     $.ajax({
                         url : 'http://127.0.0.1:8000/Search',
-                        type : 'POST',
+                        type : 'GET',
                     });
 
                 });

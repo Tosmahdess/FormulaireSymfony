@@ -22,9 +22,10 @@ class srcDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
             self::$declaredRoutes = array(
         'formulaire_home' => array(array(), array('_controller' => 'App\\Controller\\FormulaireController::home'), array(), array(array('text', '/EntretienPro')), array(), array()),
         'formulaire_create' => array(array(), array('_controller' => 'App\\Controller\\FormulaireController::form'), array(), array(array('text', '/EntretienPro/create')), array(), array()),
-        'formulaire_edit' => array(array('id'), array('_controller' => 'App\\Controller\\FormulaireController::form'), array(), array(array('text', '/edit'), array('variable', '/', '[^/]++', 'id'), array('text', '/EntretienPro')), array(), array()),
+        'formulaire_edit' => array(array('nom'), array('_controller' => 'App\\Controller\\FormulaireController::form'), array(), array(array('text', '/edit'), array('variable', '/', '[^/]++', 'nom'), array('text', '/EntretienPro')), array(), array()),
         'formulaire_show' => array(array(), array('_controller' => 'App\\Controller\\FormulaireController::show'), array(), array(array('text', '/EntretienPro/show')), array(), array()),
         'formulaire_export' => array(array(), array('_controller' => 'App\\Controller\\FormulaireController::generateCsvAction'), array(), array(array('text', '/Export')), array(), array()),
+        'formulaire_search' => array(array(), array('_controller' => 'App\\Controller\\FormulaireController::research'), array(), array(array('text', '/Search')), array(), array()),
         '_twig_error_test' => array(array('code', '_format'), array('_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'), array('code' => '\\d+'), array(array('variable', '.', '[^/]++', '_format'), array('variable', '/', '\\d+', 'code'), array('text', '/_error')), array(), array()),
         '_wdt' => array(array('token'), array('_controller' => 'web_profiler.controller.profiler::toolbarAction'), array(), array(array('variable', '/', '[^/]++', 'token'), array('text', '/_wdt')), array(), array()),
         '_profiler_home' => array(array(), array('_controller' => 'web_profiler.controller.profiler::homeAction'), array(), array(array('text', '/_profiler/')), array(), array()),

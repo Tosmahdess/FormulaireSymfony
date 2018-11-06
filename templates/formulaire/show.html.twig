@@ -5,12 +5,28 @@
 
             {% for entretien in entretiens %}
                 <div class="row">
-                    <div class="col-md-5">
-                        <h3>{{ entretien.id }}</h3>
-                        <p>{{ entretien.nom }}</p>
-                        <p>{{ entretien.prenom }}</p>
+                    <table style="border-collapse: collapse">
+                        <tr style="border: 1px solid black">
+                            <th style="border: 1px solid black">ID</th>
+                            <th style="border: 1px solid black">Nom</th>
+                            <th style="border: 1px solid black">Prenom</th>
+                            <th style="border: 1px solid black">Filiaire</th>
+                            <th style="border: 1px solid black">Raison Sociale</th>
+                            <th style="border: 1px solid black">Etablissement</th>
+                            <th style="border: 1px solid black">Date entretien</th>
+                            <td rowspan="2"><a href="{{ path('formulaire_create') }}">Détails</a></td>
+                        </tr>
 
-                    </div>
+                        <tr style="border: 1px solid black">
+                            <td style="border: 1px solid black">{{ entretien.id }}</td>
+                            <td style="border: 1px solid black">{{ entretien.nom }}</td>
+                            <td style="border: 1px solid black">{{ entretien.prenom }}</td>
+                            <td style="border: 1px solid black">{{ entretien.filiaire }}</td>
+                            <td style="border: 1px solid black">{{ entretien.raisonsociale }}</td>
+                            <td style="border: 1px solid black">{{ entretien.etablissement }}</td>
+                            <td style="border: 1px solid black">{{ entretien.dateentretien | date('d-m-Y')}}</td>
+                        </tr>
+                    </table>
                 </div>
 
                 <hr>

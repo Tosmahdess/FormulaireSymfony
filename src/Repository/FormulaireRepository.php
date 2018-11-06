@@ -55,13 +55,11 @@ class FormulaireRepository extends ServiceEntityRepository
      */
     public function findEntretien($researchName): array
     {
-        $qb = $this->createQueryBuilder('j')
+        $repository = $this->getEntityManager()->getRepository(Formulaire::class);
+        $qb = $repository->createQueryBuilder('j')
             ->andWhere('j.nom = :nom')
-            ->setParameter('nom', $researchName)
-            ->getQuery()
-            ->getResult();
+            ->setParameter('nom', $researchName);
 
-        return $qb->execute();
-
+        return $qb->getQuery()->execute();
     }
 }

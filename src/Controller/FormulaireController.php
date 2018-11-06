@@ -44,6 +44,7 @@ class FormulaireController extends AbstractController
         $form = $this->createFormBuilder($formulaire)
                      ->add('filiaire', ChoiceType::class, array(
                             'choices' => array(
+                                '' => '',
                                 'Tourisme' => 'tourisme',
                                 'Etudiant' => 'etudiant',
                                 'Affaire' => 'affaire'
@@ -51,6 +52,7 @@ class FormulaireController extends AbstractController
                      ))
                      ->add('raisonsociale', ChoiceType::class, array(
                          'choices' => array(
+                             '' => '',
                              'LE DOMAINE DE LA BAIE' => 'LE DOMAINE DE LA BAIE',
                              'LE GRAND TETRAS' => 'LE GRAND TETRAS',
                              'LE MAS DES OLIVIERS' => 'LE MAS DES OLIVIERS',
@@ -65,6 +67,7 @@ class FormulaireController extends AbstractController
                      ))
                      ->add('etablissement', ChoiceType::class, array(
                          'choices' => array(
+                             '' => '',
                              'Plougonvelin (Bertheaume)' => 'Plougonvelin (Bertheaume)',
                              'Audierne (Domaine de la Baie)' => 'Audierne (Domaine de la Baie)',
                              'Locmaria (Iroise)' => 'Locmaria (Iroise)',

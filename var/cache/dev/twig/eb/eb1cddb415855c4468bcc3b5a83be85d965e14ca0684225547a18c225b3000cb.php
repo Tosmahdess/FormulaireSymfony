@@ -47,10 +47,7 @@ class __TwigTemplate_eb66c2f72f1eb3ea51de6c4e9e1ff28181f96037483b3aefa48a574f273
         echo "    </head>
     <body>
     <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
-        <a class=\"navbar-brand\" href=\"";
-        // line 18
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("formulaire_home");
-        echo "\">Formulaire</a>
+        <a class=\"navbar-brand\" href=\"#\">Formulaire</a>
         <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor01\" aria-controls=\"navbarColor01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
             <span class=\"navbar-toggler-icon\"></span>
         </button>
@@ -63,8 +60,11 @@ class __TwigTemplate_eb66c2f72f1eb3ea51de6c4e9e1ff28181f96037483b3aefa48a574f273
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("formulaire_create");
         echo "\">Nouveau</a>
                 </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"#\">Modifier</a>
+                <li class=\"nav-item active\">
+                    <a class=\"nav-link\" href=\"";
+        // line 29
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("formulaire_search");
+        echo "\">Recherche</a>
                 </li>
             </ul>
             <form class=\"form-inline my-2 my-lg-0\" method=\"POST\">
@@ -190,7 +190,7 @@ class __TwigTemplate_eb66c2f72f1eb3ea51de6c4e9e1ff28181f96037483b3aefa48a574f273
 
     public function getDebugInfo()
     {
-        return array (  165 => 49,  148 => 38,  133 => 9,  124 => 8,  106 => 5,  94 => 50,  92 => 49,  80 => 39,  78 => 38,  63 => 26,  52 => 18,  47 => 15,  45 => 8,  39 => 5,  33 => 1,);
+        return array (  165 => 49,  148 => 38,  133 => 9,  124 => 8,  106 => 5,  94 => 50,  92 => 49,  80 => 39,  78 => 38,  66 => 29,  60 => 26,  47 => 15,  45 => 8,  39 => 5,  33 => 1,);
     }
 
     public function getSourceContext()
@@ -212,7 +212,7 @@ class __TwigTemplate_eb66c2f72f1eb3ea51de6c4e9e1ff28181f96037483b3aefa48a574f273
     </head>
     <body>
     <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
-        <a class=\"navbar-brand\" href=\"{{ path('formulaire_home') }}\">Formulaire</a>
+        <a class=\"navbar-brand\" href=\"#\">Formulaire</a>
         <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor01\" aria-controls=\"navbarColor01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
             <span class=\"navbar-toggler-icon\"></span>
         </button>
@@ -222,8 +222,8 @@ class __TwigTemplate_eb66c2f72f1eb3ea51de6c4e9e1ff28181f96037483b3aefa48a574f273
                 <li class=\"nav-item active\">
                     <a class=\"nav-link\" href=\"{{ path('formulaire_create') }}\">Nouveau</a>
                 </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"#\">Modifier</a>
+                <li class=\"nav-item active\">
+                    <a class=\"nav-link\" href=\"{{ path('formulaire_search') }}\">Recherche</a>
                 </li>
             </ul>
             <form class=\"form-inline my-2 my-lg-0\" method=\"POST\">

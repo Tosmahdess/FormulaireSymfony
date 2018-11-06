@@ -68,13 +68,13 @@ class __TwigTemplate_61dab0af8635f64ed479f01e92e706038f6a940fa5b239a0d363fe7655f
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formUser"]) || array_key_exists("formUser", $context) ? $context["formUser"] : (function () { throw new Twig_Error_Runtime('Variable "formUser" does not exist.', 12, $this->source); })()), 'errors');
         echo "
 
-    <img align=\"left\" src=\"https://www.brochuresenligne.com/photo/art/grande/2324117-3494337.jpg?v=1485960811\">
-
-    <input style=\"margin-left: 25%; margin-top: 1%; margin-bottom: 1%\" type=\"button\" class=\"btn btn-success\" onclick=\"affCache('div1');\" value=\"Bilan période écoulée\"/>
+    <!-- <img align=\"left\" src=\"https://www.brochuresenligne.com/photo/art/grande/2324117-3494337.jpg?v=1485960811\"> -->
+    <div style=\"text-align: center\">
+    <input style=\"margin-left: 1%; margin-top: 1%; margin-bottom: 1%\" type=\"button\" class=\"btn btn-success\" onclick=\"affCache('div1');\" value=\"Bilan période écoulée\"/>
     <input style=\" margin-top: 1%; margin-bottom: 1%\" type=\"button\" class=\"btn btn-success\" onclick=\"affCache('div2');\" value=\"Bilan des formations\"/>
     <input style=\" margin-top: 1%; margin-bottom: 1%\" type=\"button\" class=\"btn btn-success\" onclick=\"affCache('div3');\" value=\"Projets\"/>
-
-    <img align=\"right\" src=\"https://www.brochuresenligne.com/photo/art/grande/2324117-3494337.jpg?v=1485960811\">
+    </div>
+    <!-- <img align=\"right\" src=\"https://www.brochuresenligne.com/photo/art/grande/2324117-3494337.jpg?v=1485960811\"> -->
 
         <hr style=\"border-width: 5px\">
 
@@ -668,13 +668,13 @@ class __TwigTemplate_61dab0af8635f64ed479f01e92e706038f6a940fa5b239a0d363fe7655f
     {{ form_start(formUser) }}
     {{ form_errors(formUser) }}
 
-    <img align=\"left\" src=\"https://www.brochuresenligne.com/photo/art/grande/2324117-3494337.jpg?v=1485960811\">
-
-    <input style=\"margin-left: 25%; margin-top: 1%; margin-bottom: 1%\" type=\"button\" class=\"btn btn-success\" onclick=\"affCache('div1');\" value=\"Bilan période écoulée\"/>
+    <!-- <img align=\"left\" src=\"https://www.brochuresenligne.com/photo/art/grande/2324117-3494337.jpg?v=1485960811\"> -->
+    <div style=\"text-align: center\">
+    <input style=\"margin-left: 1%; margin-top: 1%; margin-bottom: 1%\" type=\"button\" class=\"btn btn-success\" onclick=\"affCache('div1');\" value=\"Bilan période écoulée\"/>
     <input style=\" margin-top: 1%; margin-bottom: 1%\" type=\"button\" class=\"btn btn-success\" onclick=\"affCache('div2');\" value=\"Bilan des formations\"/>
     <input style=\" margin-top: 1%; margin-bottom: 1%\" type=\"button\" class=\"btn btn-success\" onclick=\"affCache('div3');\" value=\"Projets\"/>
-
-    <img align=\"right\" src=\"https://www.brochuresenligne.com/photo/art/grande/2324117-3494337.jpg?v=1485960811\">
+    </div>
+    <!-- <img align=\"right\" src=\"https://www.brochuresenligne.com/photo/art/grande/2324117-3494337.jpg?v=1485960811\"> -->
 
         <hr style=\"border-width: 5px\">
 

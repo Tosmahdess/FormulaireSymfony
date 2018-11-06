@@ -321,18 +321,15 @@ class FormulaireController extends AbstractController
     /**
      * @Route("/Search", name="formulaire_search")
      */
-    public function research(Request $request, ObjectManager $manager, EntityManagerInterface $em): Response
+    public function research(Request $request, EntityManagerInterface $em): Response
     {
         $researchName = $request->request->get("researchName");
 
-        $Entretien = $em->getDoctrine()->getRepository(FormulaireRepository::class)->findEntretien($researchName);
+        $entretiens = $em->getRepository(Formulaire::class)->findEntretien($researchName);
 
-        $jobs = $Entretien->getQuery()->getResult();
-
-        return $this->render('show.html.twig', [
-            'jobs' => $jobs,
+        return $this->render('formulaire/show.html.twig', [
+            'entretiens' => $entretiens,
         ]);
-
     }
 }
 

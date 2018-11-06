@@ -63,7 +63,5 @@ class FormulaireRepository extends ServiceEntityRepository
 
         return $qb->execute();
 
-        // to get just one result:
-        // $product = $qb->setMaxResults(1)->getOneOrNullResult();
     }
 }

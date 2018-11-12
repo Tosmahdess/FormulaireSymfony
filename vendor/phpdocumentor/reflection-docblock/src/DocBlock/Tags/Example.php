@@ -27,7 +27,7 @@ final class Example extends BaseTag
     private $filePath;
 
     /**
-     * @var bool Whether the file path component represents an URI. This determines how the file portion
+     * @var bool Whether the file path components represents an URI. This determines how the file portion
      *     appears at {@link getContent()}.
      */
     private $isURI = false;
@@ -83,7 +83,7 @@ final class Example extends BaseTag
      */
     public static function create($body)
     {
-        // File component: File path in quotes or File URI / Source information
+        // File components: File path in quotes or File URI / Source information
         if (! preg_match('/^(?:\"([^\"]+)\"|(\S+))(?:\s+(.*))?$/sux', $body, $matches)) {
             return null;
         }

@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 /**
- * Base class for events thrown in the HttpKernel component.
+ * Base class for events thrown in the HttpKernel components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

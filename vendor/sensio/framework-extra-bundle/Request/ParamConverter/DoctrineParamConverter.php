@@ -264,7 +264,7 @@ class DoctrineParamConverter implements ParamConverterInterface
     private function findViaExpression($class, Request $request, $expression, $options, ParamConverter $configuration)
     {
         if (null === $this->language) {
-            throw new \LogicException(sprintf('To use the @%s tag with the "expr" option, you need to install the ExpressionLanguage component.', $this->getAnnotationName($configuration)));
+            throw new \LogicException(sprintf('To use the @%s tag with the "expr" option, you need to install the ExpressionLanguage components.', $this->getAnnotationName($configuration)));
         }
 
         $repository = $this->getManager($options['entity_manager'], $class)->getRepository($class);

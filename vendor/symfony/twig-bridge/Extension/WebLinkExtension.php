@@ -18,7 +18,7 @@ use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
 /**
- * Twig extension for the Symfony WebLink component.
+ * Twig extension for the Symfony WebLink components.
  *
  * @author Kévin Dunglas <dunglas@gmail.com>
  */

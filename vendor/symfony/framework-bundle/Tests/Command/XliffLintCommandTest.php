@@ -23,7 +23,7 @@ use Symfony\Component\HttpKernel\KernelInterface;
 
 /**
  * Tests the part of the XliffLintCommand managed by the FrameworkBundle. The
- * rest of the features are tested in the Translation component.
+ * rest of the features are tested in the Translation components.
  *
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
  */

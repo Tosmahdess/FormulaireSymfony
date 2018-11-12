@@ -12,7 +12,7 @@
 namespace Symfony\Component\Filesystem\Exception;
 
 /**
- * IOException interface for file and input/output stream related exceptions thrown by the component.
+ * IOException interface for file and input/output stream related exceptions thrown by the components.
  *
  * @author Christian Gärtner <christiangaertner.film@googlemail.com>
  */

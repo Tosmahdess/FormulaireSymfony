@@ -12,7 +12,7 @@
 namespace Symfony\Component\HttpKernel;
 
 /**
- * Contains all events thrown in the HttpKernel component.
+ * Contains all events thrown in the HttpKernel components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

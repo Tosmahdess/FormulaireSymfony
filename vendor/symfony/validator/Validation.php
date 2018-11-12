@@ -14,7 +14,7 @@ namespace Symfony\Component\Validator;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
- * Entry point for the Validator component.
+ * Entry point for the Validator components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

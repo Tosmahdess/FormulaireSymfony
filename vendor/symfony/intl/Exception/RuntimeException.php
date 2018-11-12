@@ -12,7 +12,7 @@
 namespace Symfony\Component\Intl\Exception;
 
 /**
- * RuntimeException for the Intl component.
+ * RuntimeException for the Intl components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

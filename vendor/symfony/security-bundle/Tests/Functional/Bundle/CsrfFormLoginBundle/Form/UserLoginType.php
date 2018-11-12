@@ -21,7 +21,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Security\Core\Security;
 
 /**
- * Form type for use with the Security component's form-based authentication
+ * Form type for use with the Security components's form-based authentication
  * listener.
  *
  * @author Henrik Bjornskov <henrik@bjrnskov.dk>
@@ -49,7 +49,7 @@ class UserLoginType extends AbstractType
 
         $request = $this->requestStack->getCurrentRequest();
 
-        /* Note: since the Security component's form login listener intercepts
+        /* Note: since the Security components's form login listener intercepts
          * the POST request, this form will never really be bound to the
          * request; however, we can match the expected behavior by checking the
          * session for an authentication error and last username.

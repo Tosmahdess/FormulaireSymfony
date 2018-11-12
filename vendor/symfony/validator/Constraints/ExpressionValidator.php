@@ -55,7 +55,7 @@ class ExpressionValidator extends ConstraintValidator
     {
         if (null === $this->expressionLanguage) {
             if (!class_exists('Symfony\Component\ExpressionLanguage\ExpressionLanguage')) {
-                throw new RuntimeException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed.');
+                throw new RuntimeException('Unable to use expressions as the Symfony ExpressionLanguage components is not installed.');
             }
             $this->expressionLanguage = new ExpressionLanguage();
         }

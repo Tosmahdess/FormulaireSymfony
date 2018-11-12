@@ -44,7 +44,7 @@ interface TreeWalker
     public function getQueryComponents();
 
     /**
-     * Sets or overrides a query component for a given dql alias.
+     * Sets or overrides a query components for a given dql alias.
      *
      * @param string $dqlAlias       The DQL alias.
      * @param array  $queryComponent

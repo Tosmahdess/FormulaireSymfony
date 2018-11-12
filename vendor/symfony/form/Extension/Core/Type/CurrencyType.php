@@ -24,7 +24,7 @@ class CurrencyType extends AbstractType implements ChoiceLoaderInterface
     /**
      * Currency loaded choice list.
      *
-     * The choices are lazy loaded and generated from the Intl component.
+     * The choices are lazy loaded and generated from the Intl components.
      *
      * {@link \Symfony\Component\Intl\Intl::getCurrencyBundle()}.
      *

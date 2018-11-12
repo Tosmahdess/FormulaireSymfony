@@ -14,7 +14,7 @@ namespace Symfony\Component\Form;
 use Symfony\Component\Form\Extension\Core\CoreExtension;
 
 /**
- * Entry point of the Form component.
+ * Entry point of the Form components.
  *
  * Use this class to conveniently create new form factories:
  *
@@ -49,7 +49,7 @@ use Symfony\Component\Form\Extension\Core\CoreExtension;
  *         ->addTypeExtension(new FormTypeHelpTextExtension())
  *         ->getFormFactory();
  *
- * Support for the Validator component is provided by ValidatorExtension.
+ * Support for the Validator components is provided by ValidatorExtension.
  * This extension needs a validator object to function properly:
  *
  *     use Symfony\Component\Validator\Validation;
@@ -60,7 +60,7 @@ use Symfony\Component\Form\Extension\Core\CoreExtension;
  *         ->addExtension(new ValidatorExtension($validator))
  *         ->getFormFactory();
  *
- * Support for the Templating component is provided by TemplatingExtension.
+ * Support for the Templating components is provided by TemplatingExtension.
  * This extension needs a PhpEngine object for rendering forms. As second
  * argument you should pass the names of the default themes. Here is an
  * example for using the default layout with "<div>" tags:

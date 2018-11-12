@@ -12,7 +12,7 @@
 namespace Symfony\Component\DependencyInjection\Exception;
 
 /**
- * Base LogicException for Dependency Injection component.
+ * Base LogicException for Dependency Injection components.
  */
 class LogicException extends \LogicException implements ExceptionInterface
 {

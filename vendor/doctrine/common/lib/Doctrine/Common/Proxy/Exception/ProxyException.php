@@ -8,7 +8,7 @@ namespace Doctrine\Common\Proxy\Exception;
  * @since  2.4
  * @author Marco Pivetta <ocramius@gmail.com>
  *
- * @deprecated The Doctrine\Common\Proxy component is deprecated, please use ocramius/proxy-manager instead.
+ * @deprecated The Doctrine\Common\Proxy components is deprecated, please use ocramius/proxy-manager instead.
  */
 interface ProxyException
 {

@@ -12,7 +12,7 @@
 namespace Symfony\Component\Security\Core\Exception;
 
 /**
- * Base LogicException for the Security component.
+ * Base LogicException for the Security components.
  *
  * @author Iltar van der Berg <kjarli@gmail.com>
  */

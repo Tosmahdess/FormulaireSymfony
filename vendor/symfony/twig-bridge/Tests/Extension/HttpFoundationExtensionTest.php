@@ -60,7 +60,7 @@ class HttpFoundationExtensionTest extends TestCase
     public function testGenerateAbsoluteUrlWithRequestContext($path, $baseUrl, $host, $scheme, $httpPort, $httpsPort, $expected)
     {
         if (!class_exists('Symfony\Component\Routing\RequestContext')) {
-            $this->markTestSkipped('The Routing component is needed to run tests that depend on its request context.');
+            $this->markTestSkipped('The Routing components is needed to run tests that depend on its request context.');
         }
 
         $requestContext = new RequestContext($baseUrl, 'GET', $host, $scheme, $httpPort, $httpsPort, $path);
@@ -75,7 +75,7 @@ class HttpFoundationExtensionTest extends TestCase
     public function testGenerateAbsoluteUrlWithoutRequestAndRequestContext($path)
     {
         if (!class_exists('Symfony\Component\Routing\RequestContext')) {
-            $this->markTestSkipped('The Routing component is needed to run tests that depend on its request context.');
+            $this->markTestSkipped('The Routing components is needed to run tests that depend on its request context.');
         }
 
         $extension = new HttpFoundationExtension(new RequestStack());

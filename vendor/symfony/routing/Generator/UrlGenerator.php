@@ -52,7 +52,7 @@ class UrlGenerator implements UrlGeneratorInterface, ConfigurableRequirementsInt
         // some webservers don't allow the slash in encoded form in the path for security reasons anyway
         // see http://stackoverflow.com/questions/4069002/http-400-if-2f-part-of-get-url-in-jboss
         '%2F' => '/',
-        // the following chars are general delimiters in the URI specification but have only special meaning in the authority component
+        // the following chars are general delimiters in the URI specification but have only special meaning in the authority components
         // so they can safely be used in the path in unencoded form
         '%40' => '@',
         '%3A' => ':',
@@ -280,7 +280,7 @@ class UrlGenerator implements UrlGeneratorInterface, ConfigurableRequirementsInt
     /**
      * Returns the target path as relative reference from the base path.
      *
-     * Only the URIs path component (no schema, host etc.) is relevant and must be given, starting with a slash.
+     * Only the URIs path components (no schema, host etc.) is relevant and must be given, starting with a slash.
      * Both paths must be absolute and not contain relative parts.
      * Relative URLs from one resource to another are useful when generating self-contained downloadable document archives.
      * Furthermore, they can be used to reduce the link size in documents.

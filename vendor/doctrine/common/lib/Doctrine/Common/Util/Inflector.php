@@ -10,7 +10,7 @@ use const E_USER_DEPRECATED;
 /**
  * Doctrine inflector has static methods for inflecting text.
  *
- * Kept for backwards compatibility reasons, was moved to its own component.
+ * Kept for backwards compatibility reasons, was moved to its own components.
  *
  * @deprecated The Inflector class is deprecated, use Doctrine\Common\Inflector\Inflector from doctrine/inflector package instead,
  */

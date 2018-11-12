@@ -656,7 +656,7 @@ class SecurityExtension extends Extension
         }
 
         if (!class_exists('Symfony\Component\ExpressionLanguage\ExpressionLanguage')) {
-            throw new \RuntimeException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed.');
+            throw new \RuntimeException('Unable to use expressions as the Symfony ExpressionLanguage components is not installed.');
         }
 
         $container

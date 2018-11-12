@@ -24,7 +24,7 @@ class LanguageType extends AbstractType implements ChoiceLoaderInterface
     /**
      * Language loaded choice list.
      *
-     * The choices are lazy loaded and generated from the Intl component.
+     * The choices are lazy loaded and generated from the Intl components.
      *
      * {@link \Symfony\Component\Intl\Intl::getLanguageBundle()}.
      *

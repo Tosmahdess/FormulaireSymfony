@@ -12,7 +12,7 @@
 namespace Symfony\Component\Form\Exception;
 
 /**
- * Base InvalidArgumentException for the Form component.
+ * Base InvalidArgumentException for the Form components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

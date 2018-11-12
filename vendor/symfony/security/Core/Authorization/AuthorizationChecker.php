@@ -16,7 +16,7 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 use Symfony\Component\Security\Core\Exception\AuthenticationCredentialsNotFoundException;
 
 /**
- * AuthorizationChecker is the main authorization point of the Security component.
+ * AuthorizationChecker is the main authorization point of the Security components.
  *
  * It gives access to the token representing the current user authentication.
  *

@@ -12,7 +12,7 @@
 namespace Symfony\Component\Translation\Exception;
 
 /**
- * Exception interface for all exceptions thrown by the component.
+ * Exception interface for all exceptions thrown by the components.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

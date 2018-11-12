@@ -20,7 +20,7 @@ class srcDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
         $this->defaultLocale = $defaultLocale;
         if (null === self::$declaredRoutes) {
             self::$declaredRoutes = array(
-        'formulaire_home' => array(array(), array('_controller' => 'App\\Controller\\FormulaireController::home'), array(), array(array('text', '/EntretienPro')), array(), array()),
+        'formulaire_home' => array(array(), array('_controller' => 'App\\Controller\\FormulaireController::home'), array(), array(array('text', '/')), array(), array()),
         'formulaire_create' => array(array(), array('_controller' => 'App\\Controller\\FormulaireController::form'), array(), array(array('text', '/EntretienPro/create')), array(), array()),
         'formulaire_edit' => array(array('nom'), array('_controller' => 'App\\Controller\\FormulaireController::form'), array(), array(array('text', '/edit'), array('variable', '/', '[^/]++', 'nom'), array('text', '/EntretienPro')), array(), array()),
         'formulaire_show' => array(array(), array('_controller' => 'App\\Controller\\FormulaireController::show'), array(), array(array('text', '/EntretienPro/show')), array(), array()),

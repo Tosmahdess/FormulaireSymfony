@@ -120,7 +120,7 @@ class DefaultQueryCache implements QueryCache
         $cacheKeys = new CollectionCacheEntry(array_map($generateKeys, $cacheEntry->result));
         $entries   = $region->getMultiple($cacheKeys);
 
-        // @TODO - move to cache hydration component
+        // @TODO - move to cache hydration components
         foreach ($cacheEntry->result as $index => $entry) {
             $entityEntry = is_array($entries) && array_key_exists($index, $entries) ? $entries[$index] : null;
 

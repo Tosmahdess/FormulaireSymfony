@@ -12,7 +12,7 @@
 namespace Symfony\Component\Form\Exception;
 
 /**
- * Base OutOfBoundsException for Form component.
+ * Base OutOfBoundsException for Form components.
  *
  * @author Alexander Kotynia <aleksander.kot@gmail.com>
  */

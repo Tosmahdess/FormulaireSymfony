@@ -12,7 +12,7 @@
 namespace Symfony\Component\Asset\Exception;
 
 /**
- * Base InvalidArgumentException for the Asset component.
+ * Base InvalidArgumentException for the Asset components.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

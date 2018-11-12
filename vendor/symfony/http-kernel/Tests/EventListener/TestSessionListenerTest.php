@@ -149,8 +149,8 @@ class TestSessionListenerTest extends TestCase
         $this->assertTrue(interface_exists(ServiceSubscriberInterface::class));
         $this->assertTrue(class_exists(SessionListener::class));
         $this->assertTrue(class_exists(TestSessionListener::class));
-        $this->assertFalse(is_subclass_of(SessionListener::class, ServiceSubscriberInterface::class), 'Implementing ServiceSubscriberInterface would create a dep on the DI component, which eg Silex cannot afford');
-        $this->assertFalse(is_subclass_of(TestSessionListener::class, ServiceSubscriberInterface::class, 'Implementing ServiceSubscriberInterface would create a dep on the DI component, which eg Silex cannot afford'));
+        $this->assertFalse(is_subclass_of(SessionListener::class, ServiceSubscriberInterface::class), 'Implementing ServiceSubscriberInterface would create a dep on the DI components, which eg Silex cannot afford');
+        $this->assertFalse(is_subclass_of(TestSessionListener::class, ServiceSubscriberInterface::class, 'Implementing ServiceSubscriberInterface would create a dep on the DI components, which eg Silex cannot afford'));
     }
 
     public function testDoesNotThrowIfRequestDoesNotHaveASession()

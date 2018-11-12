@@ -18,7 +18,7 @@ use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use Symfony\Component\Templating\PhpEngine;
 
 /**
- * Integrates the Templating component with the Form library.
+ * Integrates the Templating components with the Form library.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

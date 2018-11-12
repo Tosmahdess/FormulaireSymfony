@@ -61,7 +61,7 @@ class AuthenticationException extends RuntimeException implements \Serializable
     }
 
     /**
-     * Message key to be used by the translation component.
+     * Message key to be used by the translation components.
      *
      * @return string
      */
@@ -71,7 +71,7 @@ class AuthenticationException extends RuntimeException implements \Serializable
     }
 
     /**
-     * Message data to be used by the translation component.
+     * Message data to be used by the translation components.
      *
      * @return array
      */

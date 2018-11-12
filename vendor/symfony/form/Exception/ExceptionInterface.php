@@ -12,7 +12,7 @@
 namespace Symfony\Component\Form\Exception;
 
 /**
- * Base ExceptionInterface for the Form component.
+ * Base ExceptionInterface for the Form components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

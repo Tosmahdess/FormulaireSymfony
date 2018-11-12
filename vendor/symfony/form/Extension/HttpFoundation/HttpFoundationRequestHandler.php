@@ -21,7 +21,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 /**
  * A request processor using the {@link Request} class of the HttpFoundation
- * component.
+ * components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

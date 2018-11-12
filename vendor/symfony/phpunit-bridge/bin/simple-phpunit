@@ -239,7 +239,7 @@ if ($components) {
                 unlink($file);
             }
 
-            // Fail on any individual component failures but ignore some error codes on Windows when APCu is enabled:
+            // Fail on any individual components failures but ignore some error codes on Windows when APCu is enabled:
             // STATUS_STACK_BUFFER_OVERRUN (-1073740791/0xC0000409)
             // STATUS_ACCESS_VIOLATION (-1073741819/0xC0000005)
             // STATUS_HEAP_CORRUPTION (-1073740940/0xC0000374)

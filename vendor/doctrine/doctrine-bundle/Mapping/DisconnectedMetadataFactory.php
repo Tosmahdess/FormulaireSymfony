@@ -109,7 +109,7 @@ class DisconnectedMetadataFactory
             $path = $this->getBasePathForClass($r->getName(), $r->getNamespaceName(), dirname($r->getFilename()));
             $ns   = $r->getNamespaceName();
         } elseif ($path) {
-            // Get namespace by removing the last component of the FQCN
+            // Get namespace by removing the last components of the FQCN
             $nsParts = explode('\\', $all[0]->name);
             array_pop($nsParts);
             $ns = implode('\\', $nsParts);

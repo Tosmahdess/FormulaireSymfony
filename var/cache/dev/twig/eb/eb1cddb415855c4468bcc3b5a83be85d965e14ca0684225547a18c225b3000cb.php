@@ -67,7 +67,7 @@ class __TwigTemplate_eb66c2f72f1eb3ea51de6c4e9e1ff28181f96037483b3aefa48a574f273
         echo "\">Recherche</a>
                 </li>
             </ul>
-            <form class=\"form-inline my-2 my-lg-0\" method=\"POST\">
+            <form class=\"form-inline my-2 my-lg-0\" method=\"POST\" action=\"/Search\">
                 <input class=\"form-control mr-sm-2\" name=\"researchName\" id=\"search\" type=\"search\" placeholder=\"Search\">
                 <button class=\"btn btn-secondary my-2 my-sm-0\" type=\"submit\">Search</button>
             </form>
@@ -226,7 +226,7 @@ class __TwigTemplate_eb66c2f72f1eb3ea51de6c4e9e1ff28181f96037483b3aefa48a574f273
                     <a class=\"nav-link\" href=\"{{ path('formulaire_search') }}\">Recherche</a>
                 </li>
             </ul>
-            <form class=\"form-inline my-2 my-lg-0\" method=\"POST\">
+            <form class=\"form-inline my-2 my-lg-0\" method=\"POST\" action=\"/Search\">
                 <input class=\"form-control mr-sm-2\" name=\"researchName\" id=\"search\" type=\"search\" placeholder=\"Search\">
                 <button class=\"btn btn-secondary my-2 my-sm-0\" type=\"submit\">Search</button>
             </form>
@@ -246,6 +246,6 @@ class __TwigTemplate_eb66c2f72f1eb3ea51de6c4e9e1ff28181f96037483b3aefa48a574f273
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\wamp\\www\\Formulaire\\Formulaire\\templates\\base.html.twig");
+", "base.html.twig", "F:\\ProjetsSymfony\\FormulaireSymfony\\templates\\base.html.twig");
     }
 }

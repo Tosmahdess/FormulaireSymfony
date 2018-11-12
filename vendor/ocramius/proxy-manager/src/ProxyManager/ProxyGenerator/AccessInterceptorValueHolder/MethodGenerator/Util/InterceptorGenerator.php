@@ -30,7 +30,7 @@ use Zend\Code\Generator\PropertyGenerator;
  * @author Marco Pivetta <ocramius@gmail.com>
  * @license MIT
  *
- * @private - this class is just here as a small utility for this component, don't use it in your own code
+ * @private - this class is just here as a small utility for this components, don't use it in your own code
  */
 class InterceptorGenerator
 {

@@ -13,7 +13,7 @@ use Doctrine\Common\Util\ClassUtils;
  * @author Marco Pivetta <ocramius@gmail.com>
  * @since  2.4
  *
- * @deprecated The Doctrine\Common\Proxy component is deprecated, please use ocramius/proxy-manager instead.
+ * @deprecated The Doctrine\Common\Proxy components is deprecated, please use ocramius/proxy-manager instead.
  */
 class ProxyGenerator
 {

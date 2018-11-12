@@ -12,7 +12,7 @@
 namespace Symfony\Component\PropertyAccess\Exception;
 
 /**
- * Base InvalidArgumentException for the PropertyAccess component.
+ * Base InvalidArgumentException for the PropertyAccess components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

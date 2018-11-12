@@ -23,7 +23,7 @@ trait ValidatorExtensionTrait
     protected function getValidatorExtension()
     {
         if (!interface_exists(ValidatorInterface::class)) {
-            throw new \Exception('In order to use the "ValidatorExtensionTrait", the symfony/validator component must be installed');
+            throw new \Exception('In order to use the "ValidatorExtensionTrait", the symfony/validator components must be installed');
         }
 
         if (!$this instanceof TypeTestCase) {

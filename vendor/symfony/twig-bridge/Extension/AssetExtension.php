@@ -16,7 +16,7 @@ use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
 /**
- * Twig extension for the Symfony Asset component.
+ * Twig extension for the Symfony Asset components.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

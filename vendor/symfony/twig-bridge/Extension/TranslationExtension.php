@@ -23,7 +23,7 @@ use Twig\TokenParser\AbstractTokenParser;
 use Twig\TwigFilter;
 
 /**
- * Provides integration of the Translation component with Twig.
+ * Provides integration of the Translation components with Twig.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

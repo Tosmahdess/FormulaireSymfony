@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
 use Symfony\Component\Intl\Intl;
 
 /**
- * Helper class for preparing test cases that rely on the Intl component.
+ * Helper class for preparing test cases that rely on the Intl components.
  *
  * Any test that tests functionality relying on either the intl classes or
  * the resource bundle data should call either of the methods

@@ -14,7 +14,7 @@ namespace Symfony\Component\Form\Extension\HttpFoundation;
 use Symfony\Component\Form\AbstractExtension;
 
 /**
- * Integrates the HttpFoundation component with the Form library.
+ * Integrates the HttpFoundation components with the Form library.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

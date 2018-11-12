@@ -132,7 +132,7 @@ abstract class FileCache extends CacheProvider
             || ((strlen($id) * 2 + $this->extensionStringLength) > 255)
             || ($this->isRunningOnWindows && ($this->directoryStringLength + 4 + strlen($id) * 2 + $this->extensionStringLength) > 258)
         ) {
-            // Most filesystems have a limit of 255 chars for each path component. On Windows the the whole path is limited
+            // Most filesystems have a limit of 255 chars for each path components. On Windows the the whole path is limited
             // to 260 chars (including terminating null char). Using long UNC ("\\?\" prefix) does not work with the PHP API.
             // And there is a bug in PHP (https://bugs.php.net/bug.php?id=70943) with path lengths of 259.
             // So if the id in hex representation would surpass the limit, we use the hash instead. The prefix prevents

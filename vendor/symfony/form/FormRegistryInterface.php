@@ -12,7 +12,7 @@
 namespace Symfony\Component\Form;
 
 /**
- * The central registry of the Form component.
+ * The central registry of the Form components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

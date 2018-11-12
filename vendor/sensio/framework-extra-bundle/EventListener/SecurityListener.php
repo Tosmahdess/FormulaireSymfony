@@ -66,7 +66,7 @@ class SecurityListener implements EventSubscriberInterface
         }
 
         if (null === $this->language) {
-            throw new \LogicException('To use the @Security tag, you need to use the Security component 2.4 or newer and install the ExpressionLanguage component.');
+            throw new \LogicException('To use the @Security tag, you need to use the Security components 2.4 or newer and install the ExpressionLanguage components.');
         }
 
         foreach ($configurations as $configuration) {

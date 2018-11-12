@@ -121,7 +121,7 @@ class GlobResource implements \IteratorAggregate, SelfCheckingResourceInterface,
         }
 
         if (!class_exists(Finder::class)) {
-            throw new \LogicException(sprintf('Extended glob pattern "%s" cannot be used as the Finder component is not installed.', $this->pattern));
+            throw new \LogicException(sprintf('Extended glob pattern "%s" cannot be used as the Finder components is not installed.', $this->pattern));
         }
 
         $finder = new Finder();

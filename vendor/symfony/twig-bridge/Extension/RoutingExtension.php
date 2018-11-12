@@ -19,7 +19,7 @@ use Twig\Node\Node;
 use Twig\TwigFunction;
 
 /**
- * Provides integration of the Routing component with Twig.
+ * Provides integration of the Routing components with Twig.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

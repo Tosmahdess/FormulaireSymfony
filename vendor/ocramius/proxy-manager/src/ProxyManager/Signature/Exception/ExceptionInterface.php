@@ -21,7 +21,7 @@ declare(strict_types=1);
 namespace ProxyManager\Signature\Exception;
 
 /**
- * Exception marker for exceptions from the signature sub-component
+ * Exception marker for exceptions from the signature sub-components
  *
  * @author Marco Pivetta <ocramius@gmail.com>
  * @license MIT

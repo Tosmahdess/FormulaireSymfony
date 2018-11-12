@@ -153,7 +153,7 @@ class AnalyzeServiceReferencesPass extends AbstractRecursivePass implements Repe
     {
         if (null === $this->expressionLanguage) {
             if (!class_exists(ExpressionLanguage::class)) {
-                throw new RuntimeException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed.');
+                throw new RuntimeException('Unable to use expressions as the Symfony ExpressionLanguage components is not installed.');
             }
 
             $providers = $this->container->getExpressionLanguageProviders();

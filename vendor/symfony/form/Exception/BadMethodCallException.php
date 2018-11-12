@@ -12,7 +12,7 @@
 namespace Symfony\Component\Form\Exception;
 
 /**
- * Base BadMethodCallException for the Form component.
+ * Base BadMethodCallException for the Form components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

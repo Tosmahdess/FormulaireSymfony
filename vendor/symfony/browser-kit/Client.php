@@ -456,7 +456,7 @@ abstract class Client
     /**
      * Creates a crawler.
      *
-     * This method returns null if the DomCrawler component is not available.
+     * This method returns null if the DomCrawler components is not available.
      *
      * @param string $uri     A URI
      * @param string $content Content for the crawler to use

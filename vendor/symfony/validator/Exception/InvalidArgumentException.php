@@ -12,7 +12,7 @@
 namespace Symfony\Component\Validator\Exception;
 
 /**
- * Base InvalidArgumentException for the Validator component.
+ * Base InvalidArgumentException for the Validator components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

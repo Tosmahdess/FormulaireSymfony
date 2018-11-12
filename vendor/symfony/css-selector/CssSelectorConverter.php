@@ -19,7 +19,7 @@ use Symfony\Component\CssSelector\XPath\Extension\HtmlExtension;
 use Symfony\Component\CssSelector\XPath\Translator;
 
 /**
- * CssSelectorConverter is the main entry point of the component and can convert CSS
+ * CssSelectorConverter is the main entry point of the components and can convert CSS
  * selectors to XPath expressions.
  *
  * @author Christophe Coevoet <stof@notk.org>

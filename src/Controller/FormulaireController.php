@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -23,7 +24,7 @@ use Doctrine\Common\Persistence\ObjectRepository;
 class FormulaireController extends AbstractController
 {
     /**
-     * @Route("/EntretienPro", name="formulaire_home")
+     * @Route("/", name="formulaire_home")
      */
     public function home()
     {
@@ -211,9 +212,10 @@ class FormulaireController extends AbstractController
             $manager->persist($formulaire);
             $manager->flush();
 
-            return $this->redirectToRoute('formulaire_show');
-        }
+            $this->addFlash('success', 'Utilisateur enregistré');
 
+            return $this->redirectToRoute('formulaire_create');
+        }
         return $this->render('formulaire/create.html.twig', [
             'formUser' => $form->createView(),
             'editMode' => $formulaire->getNom() !== null
@@ -225,6 +227,7 @@ class FormulaireController extends AbstractController
      */
     public function show()
     {
+
         return $this->render('formulaire/show.html.twig', [
             'controller_name' => 'FormulaireController',
         ]);
@@ -286,25 +289,25 @@ class FormulaireController extends AbstractController
                     $result->getEtablissement(),
                     $result->getNom(),
                     $result->getPrenom(),
-                    $result->getDateembauche()->format('dd-MM-yyyy'),
+                    $result->getDateembauche() instanceof \DateTime ? $result->getDateembauche()->format('dd-MM-yyyy') : "",
                     $result->getPersonnechargeentretien(),
-                    $result->getDernierentretien()->format('dd-MM-yyyy'),
-                    $result->getDateentretien()->format('dd-MM-yyyy'),
-                    $result->getConvocationenvoye()->format('dd-MM-yyyy'),
+                    $result->getDernierentretien() instanceof \DateTime ? $result->getDernierentretien()->format('dd-MM-yyyy') : "",
+                    $result->getDateentretien() instanceof \DateTime ? $result->getDateentretien()->format('dd-MM-yyyy') : "",
+                    $result->getConvocationenvoye()instanceof \DateTime ? $result->getConvocationenvoye()->format('dd-MM-yyyy') : "",
                     $result->getConvocationtype(),
-                    $result->getRetourdossier()->format('dd-MM-yyyy'),
+                    $result->getRetourdossier()instanceof \DateTime ? $result->getRetourdossier()->format('dd-MM-yyyy') : "",
                     $result->getProgressionpro(),
                     $result->getActionformation1(),
-                    $result->getDateformation1()->format('dd-MM-yyyy'),
+                    $result->getDateformation1()instanceof \DateTime ? $result->getDateformation1()->format('dd-MM-yyyy') : "",
                     $result->getActionformation2(),
-                    $result->getDateformation2()->format('dd-MM-yyyy'),
+                    $result->getDateformation2()instanceof \DateTime ? $result->getDateformation2()->format('dd-MM-yyyy') : "",
                     $result->getCertification(),
                     $result->getObjectifsct(),
                     $result->getObjectifsmlt(),
                     $result->getDemandeformation1(),
-                    $result->getDateprevi1()->format('dd-MM-yyyy'),
+                    $result->getDateprevi1()instanceof \DateTime ? $result->getDateprevi1()->format('dd-MM-yyyy') : "",
                     $result->getDemandeformation2(),
-                    $result->getDateprevi2()->format('dd-MM-yyyy'),
+                    $result->getDateprevi2()instanceof \DateTime ? $result->getDateprevi2()->format('dd-MM-yyyy') : "",
                     $result->getAvisresponsable(),
                     $result->getProjet()
                 ),';');

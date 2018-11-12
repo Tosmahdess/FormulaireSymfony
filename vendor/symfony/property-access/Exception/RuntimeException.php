@@ -12,7 +12,7 @@
 namespace Symfony\Component\PropertyAccess\Exception;
 
 /**
- * Base RuntimeException for the PropertyAccess component.
+ * Base RuntimeException for the PropertyAccess components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

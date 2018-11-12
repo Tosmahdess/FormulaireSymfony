@@ -12,7 +12,7 @@
 namespace Symfony\Component\Intl\Exception;
 
 /**
- * Base BadMethodCallException for the Intl component.
+ * Base BadMethodCallException for the Intl components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

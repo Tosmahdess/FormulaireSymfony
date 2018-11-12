@@ -110,7 +110,7 @@ trait ControllerTrait
     }
 
     /**
-     * Returns a JsonResponse that uses the serializer component if enabled, or json_encode.
+     * Returns a JsonResponse that uses the serializer components if enabled, or json_encode.
      *
      * @final
      */
@@ -288,14 +288,14 @@ trait ControllerTrait
      *
      *     throw $this->createAccessDeniedException('Unable to access this page!');
      *
-     * @throws \LogicException If the Security component is not available
+     * @throws \LogicException If the Security components is not available
      *
      * @final
      */
     protected function createAccessDeniedException(string $message = 'Access Denied.', \Exception $previous = null): AccessDeniedException
     {
         if (!class_exists(AccessDeniedException::class)) {
-            throw new \LogicException('You can not use the "createAccessDeniedException" method if the Security component is not available. Try running "composer require symfony/security-bundle".');
+            throw new \LogicException('You can not use the "createAccessDeniedException" method if the Security components is not available. Try running "composer require symfony/security-bundle".');
         }
 
         return new AccessDeniedException($message, $previous);

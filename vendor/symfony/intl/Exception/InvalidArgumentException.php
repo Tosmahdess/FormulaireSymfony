@@ -12,7 +12,7 @@
 namespace Symfony\Component\Intl\Exception;
 
 /**
- * InvalidArgumentException for the Intl component.
+ * InvalidArgumentException for the Intl components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

@@ -12,7 +12,7 @@
 namespace Symfony\Component\Asset\Exception;
 
 /**
- * Base LogicException for the Asset component.
+ * Base LogicException for the Asset components.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

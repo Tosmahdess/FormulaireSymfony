@@ -221,7 +221,7 @@ class SqlWalker implements TreeWalker
     }
 
     /**
-     * Gets the information about a single query component.
+     * Gets the information about a single query components.
      *
      * @param string $dqlAlias The DQL alias.
      *

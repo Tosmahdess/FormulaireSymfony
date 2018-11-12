@@ -16,7 +16,7 @@ use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
 /**
- * Provides integration with the HttpKernel component.
+ * Provides integration with the HttpKernel components.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

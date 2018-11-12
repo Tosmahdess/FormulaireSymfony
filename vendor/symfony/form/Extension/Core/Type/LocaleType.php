@@ -24,7 +24,7 @@ class LocaleType extends AbstractType implements ChoiceLoaderInterface
     /**
      * Locale loaded choice list.
      *
-     * The choices are lazy loaded and generated from the Intl component.
+     * The choices are lazy loaded and generated from the Intl components.
      *
      * {@link \Symfony\Component\Intl\Intl::getLocaleBundle()}.
      *

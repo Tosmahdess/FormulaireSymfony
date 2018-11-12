@@ -34,7 +34,7 @@ class UseUse extends Node\Stmt
     }
 
     /**
-     * Get alias. If not explicitly given this is the last component of the used name.
+     * Get alias. If not explicitly given this is the last components of the used name.
      *
      * @return Identifier
      */

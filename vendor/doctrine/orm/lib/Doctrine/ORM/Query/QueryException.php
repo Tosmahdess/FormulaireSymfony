@@ -263,7 +263,7 @@ class QueryException extends \Doctrine\ORM\ORMException
     public static function invalidQueryComponent($dqlAlias)
     {
         return new self(
-            "Invalid query component given for DQL alias '" . $dqlAlias . "', ".
+            "Invalid query components given for DQL alias '" . $dqlAlias . "', ".
             "requires 'metadata', 'parent', 'relation', 'map', 'nestingLevel' and 'token' keys."
         );
     }

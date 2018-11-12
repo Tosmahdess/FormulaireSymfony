@@ -17,7 +17,7 @@ use Symfony\Component\Form\Exception\LogicException;
 use Symfony\Component\Form\Exception\UnexpectedTypeException;
 
 /**
- * The central registry of the Form component.
+ * The central registry of the Form components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

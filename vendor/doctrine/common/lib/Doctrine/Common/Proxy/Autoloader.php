@@ -10,7 +10,7 @@ use Doctrine\Common\Proxy\Exception\InvalidArgumentException;
  *
  * @internal
  *
- * @deprecated The Doctrine\Common\Proxy component is deprecated, please use ocramius/proxy-manager instead.
+ * @deprecated The Doctrine\Common\Proxy components is deprecated, please use ocramius/proxy-manager instead.
  */
 class Autoloader
 {

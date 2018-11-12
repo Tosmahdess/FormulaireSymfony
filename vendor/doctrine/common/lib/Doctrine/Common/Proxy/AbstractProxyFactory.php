@@ -12,7 +12,7 @@ use Doctrine\Common\Util\ClassUtils;
  *
  * @author Benjamin Eberlei <kontakt@beberlei.de>
  *
- * @deprecated The Doctrine\Common\Proxy component is deprecated, please use ocramius/proxy-manager instead.
+ * @deprecated The Doctrine\Common\Proxy components is deprecated, please use ocramius/proxy-manager instead.
  */
 abstract class AbstractProxyFactory
 {

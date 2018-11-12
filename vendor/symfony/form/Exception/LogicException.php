@@ -12,7 +12,7 @@
 namespace Symfony\Component\Form\Exception;
 
 /**
- * Base LogicException for Form component.
+ * Base LogicException for Form components.
  *
  * @author Alexander Kotynia <aleksander.kot@gmail.com>
  */

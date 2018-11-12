@@ -305,7 +305,7 @@ class ObjectHydrator extends AbstractHydrator
      *
      * @internal
      * First, the data of the row is split into chunks where each chunk contains data
-     * that belongs to a particular component/class. Afterwards, all these chunks
+     * that belongs to a particular components/class. Afterwards, all these chunks
      * are processed, one after the other. For each chunk of class data only one of the
      * following code paths is executed:
      *

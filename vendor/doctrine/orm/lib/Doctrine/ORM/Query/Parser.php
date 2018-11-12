@@ -1919,7 +1919,7 @@ class Parser
         $this->match(Lexer::T_BY);
         $pathExpr = $this->StateFieldPathExpression();
 
-        // Add the INDEX BY info to the query component
+        // Add the INDEX BY info to the query components
         $this->queryComponents[$pathExpr->identificationVariable]['map'] = $pathExpr->field;
 
         return new AST\IndexBy($pathExpr);
@@ -3244,7 +3244,7 @@ class Parser
 
                 $lookaheadValue = $this->lexer->lookahead['value'];
 
-                // Validate existing component
+                // Validate existing components
                 if ( ! isset($this->queryComponents[$lookaheadValue])) {
                     $this->semanticalError('Cannot add having condition on undefined result variable.');
                 }

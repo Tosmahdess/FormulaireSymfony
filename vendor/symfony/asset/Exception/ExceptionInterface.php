@@ -12,7 +12,7 @@
 namespace Symfony\Component\Asset\Exception;
 
 /**
- * Base ExceptionInterface for the Asset component.
+ * Base ExceptionInterface for the Asset components.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

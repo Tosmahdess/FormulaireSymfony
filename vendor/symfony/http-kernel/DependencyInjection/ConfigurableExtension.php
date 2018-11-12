@@ -19,7 +19,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
  *
  * You can use this as base class if
  *
- *    a) you use the Config/Definition component for configuration,
+ *    a) you use the Config/Definition components for configuration,
  *    b) your configuration class is named "Configuration", and
  *    c) the configuration class resides in the DependencyInjection sub-folder.
  *

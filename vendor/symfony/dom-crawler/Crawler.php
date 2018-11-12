@@ -692,7 +692,7 @@ class Crawler implements \Countable, \IteratorAggregate
     public function filter($selector)
     {
         if (!class_exists(CssSelectorConverter::class)) {
-            throw new \RuntimeException('To filter with a CSS selector, install the CssSelector component ("composer require symfony/css-selector"). Or use filterXpath instead.');
+            throw new \RuntimeException('To filter with a CSS selector, install the CssSelector components ("composer require symfony/css-selector"). Or use filterXpath instead.');
         }
 
         $converter = new CssSelectorConverter($this->isHtml);

@@ -12,7 +12,7 @@
 namespace Symfony\Component\Security\Core\Exception;
 
 /**
- * Base ExceptionInterface for the Security component.
+ * Base ExceptionInterface for the Security components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

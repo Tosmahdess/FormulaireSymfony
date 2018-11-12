@@ -18,7 +18,7 @@ use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
 /**
- * Twig extension for the Symfony HttpFoundation component.
+ * Twig extension for the Symfony HttpFoundation components.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

@@ -29,7 +29,7 @@ use Webmozart\Assert\Assert;
  * > it violates the constraint with the interface; it is recommended to use the {@see Assert::notNull()} method to
  * > verify that a dependency is actually passed.
  *
- * This Factory also features a Service Locator component that is used to pass the right dependencies to the
+ * This Factory also features a Service Locator components that is used to pass the right dependencies to the
  * `create` method of a tag; each dependency should be registered as a service or as a parameter.
  *
  * When you want to use a Tag of your own with custom handling you need to call the `registerTagHandler` method, pass

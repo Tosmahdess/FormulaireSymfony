@@ -327,7 +327,7 @@ final class Dotenv
             }
 
             if (!class_exists(Process::class)) {
-                throw new \LogicException('Resolving commands requires the Symfony Process component.');
+                throw new \LogicException('Resolving commands requires the Symfony Process components.');
             }
 
             $process = new Process('echo '.$matches[0]);

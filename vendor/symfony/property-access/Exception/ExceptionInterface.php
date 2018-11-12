@@ -12,7 +12,7 @@
 namespace Symfony\Component\PropertyAccess\Exception;
 
 /**
- * Marker interface for the PropertyAccess component.
+ * Marker interface for the PropertyAccess components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

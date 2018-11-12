@@ -160,7 +160,7 @@ class EnvVarProcessor implements EnvVarProcessorInterface
     private static function phpize($value)
     {
         if (!class_exists(XmlUtils::class)) {
-            throw new RuntimeException('The Symfony Config component is required to cast env vars to "bool", "int" or "float".');
+            throw new RuntimeException('The Symfony Config components is required to cast env vars to "bool", "int" or "float".');
         }
 
         return XmlUtils::phpize($value);

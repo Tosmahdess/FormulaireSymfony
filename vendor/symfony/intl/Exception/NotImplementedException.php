@@ -12,7 +12,7 @@
 namespace Symfony\Component\Intl\Exception;
 
 /**
- * Base exception class for not implemented behaviors of the intl extension in the Locale component.
+ * Base exception class for not implemented behaviors of the intl extension in the Locale components.
  *
  * @author Eriksen Costa <eriksen.costa@infranology.com.br>
  */

@@ -29,8 +29,8 @@ class FormHelperDivLayoutTest extends AbstractDivLayoutTest
 
     protected function getExtensions()
     {
-        // should be moved to the Form component once absolute file paths are supported
-        // by the default name parser in the Templating component
+        // should be moved to the Form components once absolute file paths are supported
+        // by the default name parser in the Templating components
         $reflClass = new \ReflectionClass('Symfony\Bundle\FrameworkBundle\FrameworkBundle');
         $root = realpath(\dirname($reflClass->getFileName()).'/Resources/views');
         $rootTheme = realpath(__DIR__.'/Resources');

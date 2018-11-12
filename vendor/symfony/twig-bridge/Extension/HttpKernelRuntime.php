@@ -15,7 +15,7 @@ use Symfony\Component\HttpKernel\Controller\ControllerReference;
 use Symfony\Component\HttpKernel\Fragment\FragmentHandler;
 
 /**
- * Provides integration with the HttpKernel component.
+ * Provides integration with the HttpKernel components.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

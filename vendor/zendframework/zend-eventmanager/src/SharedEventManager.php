@@ -50,7 +50,7 @@ class SharedEventManager implements SharedEventManagerInterface
      * }
      * </code>
      *
-     * @param  string $identifier Identifier for event emitting component.
+     * @param  string $identifier Identifier for event emitting components.
      * @param  string $event
      * @param  callable $listener Listener that will handle the event.
      * @param  int $priority Priority at which listener should execute

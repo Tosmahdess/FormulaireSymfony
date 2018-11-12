@@ -12,7 +12,7 @@
 namespace Symfony\Component\PropertyAccess\Exception;
 
 /**
- * Base OutOfBoundsException for the PropertyAccess component.
+ * Base OutOfBoundsException for the PropertyAccess components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

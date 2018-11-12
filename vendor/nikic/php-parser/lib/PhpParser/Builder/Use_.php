@@ -27,7 +27,7 @@ class Use_ implements Builder
     /**
      * Sets alias for used name.
      *
-     * @param string $alias Alias to use (last component of full name by default)
+     * @param string $alias Alias to use (last components of full name by default)
      *
      * @return $this The builder instance (for fluid interface)
      */

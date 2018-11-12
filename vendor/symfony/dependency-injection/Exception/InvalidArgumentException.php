@@ -12,7 +12,7 @@
 namespace Symfony\Component\DependencyInjection\Exception;
 
 /**
- * Base InvalidArgumentException for Dependency Injection component.
+ * Base InvalidArgumentException for Dependency Injection components.
  *
  * @author Bulat Shakirzyanov <bulat@theopenskyproject.com>
  */

@@ -12,7 +12,7 @@
 namespace Symfony\Component\Intl\Exception;
 
 /**
- * Base ExceptionInterface for the Intl component.
+ * Base ExceptionInterface for the Intl components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

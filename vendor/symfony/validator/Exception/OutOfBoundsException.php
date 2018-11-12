@@ -12,7 +12,7 @@
 namespace Symfony\Component\Validator\Exception;
 
 /**
- * Base OutOfBoundsException for the Validator component.
+ * Base OutOfBoundsException for the Validator components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

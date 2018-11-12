@@ -17,7 +17,7 @@ interface SharedEventManagerInterface
     /**
      * Attach a listener to an event emitted by components with specific identifiers.
      *
-     * @param  string $identifier Identifier for event emitting component
+     * @param  string $identifier Identifier for event emitting components
      * @param  string $eventName
      * @param  callable $listener Listener that will handle the event.
      * @param  int $priority Priority at which listener should execute

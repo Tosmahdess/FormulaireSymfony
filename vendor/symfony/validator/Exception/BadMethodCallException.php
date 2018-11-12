@@ -12,7 +12,7 @@
 namespace Symfony\Component\Validator\Exception;
 
 /**
- * Base BadMethodCallException for the Validator component.
+ * Base BadMethodCallException for the Validator components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

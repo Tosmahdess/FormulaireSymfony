@@ -19,7 +19,7 @@ namespace phpDocumentor\Reflection\Types;
  * for the block of code in which it is in. This information is however necessary to resolve Class names in tags since
  * you can provide a short form or make use of namespace aliases.
  *
- * The phpDocumentor Reflection component knows how to create this class but if you use the DocBlock parser from your
+ * The phpDocumentor Reflection components knows how to create this class but if you use the DocBlock parser from your
  * own application it is possible to generate a Context class using the ContextFactory; this will analyze the file in
  * which an associated class resides for its namespace and imports.
  *

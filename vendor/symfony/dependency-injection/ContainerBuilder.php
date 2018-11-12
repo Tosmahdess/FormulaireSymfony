@@ -155,7 +155,7 @@ class ContainerBuilder extends Container implements TaggedContainerInterface
      * Sets the track resources flag.
      *
      * If you are not using the loaders and therefore don't want
-     * to depend on the Config component, set this flag to false.
+     * to depend on the Config components, set this flag to false.
      *
      * @param bool $track True if you want to track resources, false otherwise
      */
@@ -1558,7 +1558,7 @@ class ContainerBuilder extends Container implements TaggedContainerInterface
     {
         if (null === $this->expressionLanguage) {
             if (!class_exists('Symfony\Component\ExpressionLanguage\ExpressionLanguage')) {
-                throw new RuntimeException('Unable to use expressions as the Symfony ExpressionLanguage component is not installed.');
+                throw new RuntimeException('Unable to use expressions as the Symfony ExpressionLanguage components is not installed.');
             }
             $this->expressionLanguage = new ExpressionLanguage(null, $this->expressionLanguageProviders);
         }

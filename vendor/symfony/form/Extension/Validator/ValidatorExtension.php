@@ -18,7 +18,7 @@ use Symfony\Component\Validator\Mapping\ClassMetadata;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
- * Extension supporting the Symfony Validator component in forms.
+ * Extension supporting the Symfony Validator components in forms.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */
@@ -31,7 +31,7 @@ class ValidatorExtension extends AbstractExtension
         $metadata = $validator->getMetadataFor('Symfony\Component\Form\Form');
 
         // Register the form constraints in the validator programmatically.
-        // This functionality is required when using the Form component without
+        // This functionality is required when using the Form components without
         // the DIC, where the XML file is loaded automatically. Thus the following
         // code must be kept synchronized with validation.xml
 

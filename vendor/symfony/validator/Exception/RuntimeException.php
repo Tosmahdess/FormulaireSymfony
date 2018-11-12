@@ -12,7 +12,7 @@
 namespace Symfony\Component\Validator\Exception;
 
 /**
- * Base RuntimeException for the Validator component.
+ * Base RuntimeException for the Validator components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

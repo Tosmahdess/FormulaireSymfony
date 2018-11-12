@@ -260,7 +260,7 @@ abstract class AbstractHydrator
      * @param array &$nonemptyComponents Does this DQL-Alias has at least one non NULL value?
      *
      * @return array  An array with all the fields (name => value) of the data row,
-     *                grouped by their component alias.
+     *                grouped by their components alias.
      */
     protected function gatherRowData(array $data, array &$id, array &$nonemptyComponents)
     {

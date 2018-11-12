@@ -736,7 +736,7 @@ class EasyLogFormatter implements FormatterInterface
     }
 
     /**
-     * It returns the level at which YAML component inlines the values, which
+     * It returns the level at which YAML components inlines the values, which
      * determines how compact or readable the information is displayed.
      *
      * @param array $record

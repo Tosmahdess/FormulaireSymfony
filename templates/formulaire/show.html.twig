@@ -3,35 +3,34 @@
 {% block body %}
     <h1 class="my-4">Liste des offres</h1>
 
+    <div class="row">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Filiaire</th>
+                <th>Raison Sociale</th>
+                <th>Etablissement</th>
+                <th>Date entretien</th>
+            </tr>
             {% for entretien in entretiens %}
-                <div class="row">
-                    <table style="border-collapse: collapse">
-                        <tr style="border: 1px solid black">
-                            <th style="border: 1px solid black">ID</th>
-                            <th style="border: 1px solid black">Nom</th>
-                            <th style="border: 1px solid black">Prenom</th>
-                            <th style="border: 1px solid black">Filiaire</th>
-                            <th style="border: 1px solid black">Raison Sociale</th>
-                            <th style="border: 1px solid black">Etablissement</th>
-                            <th style="border: 1px solid black">Date entretien</th>
-                            <td rowspan="2"><a href="{{ path('formulaire_create') }}">Détails</a></td>
-                        </tr>
-
-                        <tr style="border: 1px solid black">
-                            <td style="border: 1px solid black">{{ entretien.id }}</td>
-                            <td style="border: 1px solid black">{{ entretien.nom }}</td>
-                            <td style="border: 1px solid black">{{ entretien.prenom }}</td>
-                            <td style="border: 1px solid black">{{ entretien.filiaire }}</td>
-                            <td style="border: 1px solid black">{{ entretien.raisonsociale }}</td>
-                            <td style="border: 1px solid black">{{ entretien.etablissement }}</td>
-                            <td style="border: 1px solid black">{{ entretien.dateentretien | date('d-m-Y')}}</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <hr>
+                <tr>
+                    <td>{{ entretien.id }}</td>
+                    <td>{{ entretien.nom }}</td>
+                    <td>{{ entretien.prenom }}</td>
+                    <td>{{ entretien.filiaire }}</td>
+                    <td>{{ entretien.raisonsociale }}</td>
+                    <td>{{ entretien.etablissement }}</td>
+                    <td>{{ entretien.dateentretien | date('d-m-Y') }}</td>
+                    <td><a href="{{ path('formulaire_edit' , {nom: entretien.nom}) }}">Détails</a></td>
+                </tr>
             {% endfor %}
 
+        </table>
+    </div>
+
+    <hr>
     <ul class="pagination justify-content-center">
         <li class="page-item disabled">
             <a class="page-link" href="#" aria-label="Previous">

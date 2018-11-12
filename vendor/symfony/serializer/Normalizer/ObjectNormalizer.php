@@ -22,7 +22,7 @@ use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactoryInterface;
 use Symfony\Component\Serializer\NameConverter\NameConverterInterface;
 
 /**
- * Converts between objects and arrays using the PropertyAccess component.
+ * Converts between objects and arrays using the PropertyAccess components.
  *
  * @author Kévin Dunglas <dunglas@gmail.com>
  */
@@ -33,7 +33,7 @@ class ObjectNormalizer extends AbstractObjectNormalizer
     public function __construct(ClassMetadataFactoryInterface $classMetadataFactory = null, NameConverterInterface $nameConverter = null, PropertyAccessorInterface $propertyAccessor = null, PropertyTypeExtractorInterface $propertyTypeExtractor = null, ClassDiscriminatorResolverInterface $classDiscriminatorResolver = null)
     {
         if (!\class_exists(PropertyAccess::class)) {
-            throw new RuntimeException('The ObjectNormalizer class requires the "PropertyAccess" component. Install "symfony/property-access" to use it.');
+            throw new RuntimeException('The ObjectNormalizer class requires the "PropertyAccess" components. Install "symfony/property-access" to use it.');
         }
 
         parent::__construct($classMetadataFactory, $nameConverter, $propertyTypeExtractor, $classDiscriminatorResolver);

@@ -14,7 +14,7 @@ namespace Symfony\Component\Validator\Util;
 /**
  * Contains utility methods for dealing with property paths.
  *
- * For more extensive functionality, use Symfony's PropertyAccess component.
+ * For more extensive functionality, use Symfony's PropertyAccess components.
  *
  * @author Bernhard Schussek <bschussek@gmail.com>
  */

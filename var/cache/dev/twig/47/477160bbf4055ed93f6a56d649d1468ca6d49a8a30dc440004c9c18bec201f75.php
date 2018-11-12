@@ -595,7 +595,7 @@ class __TwigTemplate_d78c8ef5653db3f1f65eb0f480480eedfc7e3002a3cc81a37a4b8ff7d2d
         } else {
             // line 256
             echo "        <div class=\"empty\">
-            <p>The security component is disabled.</p>
+            <p>The security components is disabled.</p>
         </div>
     ";
         }
@@ -1074,7 +1074,7 @@ class __TwigTemplate_d78c8ef5653db3f1f65eb0f480480eedfc7e3002a3cc81a37a4b8ff7d2d
         {% endif %}
     {% else %}
         <div class=\"empty\">
-            <p>The security component is disabled.</p>
+            <p>The security components is disabled.</p>
         </div>
     {% endif %}
 
@@ -1156,6 +1156,6 @@ class __TwigTemplate_d78c8ef5653db3f1f65eb0f480480eedfc7e3002a3cc81a37a4b8ff7d2d
         </table>
     {% endif %}
 {% endblock %}
-", "@Security/Collector/security.html.twig", "C:\\wamp\\www\\Formulaire\\Formulaire\\vendor\\symfony\\security-bundle\\Resources\\views\\Collector\\security.html.twig");
+", "@Security/Collector/security.html.twig", "F:\\ProjetsSymfony\\FormulaireSymfony\\vendor\\symfony\\security-bundle\\Resources\\views\\Collector\\security.html.twig");
     }
 }
